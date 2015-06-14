@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pentaho</groupId>
   <artifactId>pdi-spark-plugin</artifactId>
-  <version>5.4.0.0-128</version>
+  <version>5.4.0.1-130</version>
   <packaging>jar</packaging>
   <parent>
     <groupId>org.pentaho</groupId>
