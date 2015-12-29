@@ -8,9 +8,19 @@
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
   </parent>
   <name>pdi-spark-plugin</name>
+  <scm>
+    <developerConnection>scm:git:git@github.com:pentaho/pdi-spark-plugin.git</developerConnection>
+  </scm>
+  <distributionManagement>
+    <site>
+      <id>pentaho.public.snapshot.repo</id>
+      <name>${project.artifactId}-${project.version}</name>
+      <url>dav:${site.publish.url}/${project.groupId}/pdi-spark-plugin-${project.version}</url>
+    </site>
+  </distributionManagement>
   <properties>
     <dependency.org.mockito.mockito-all.version>1.9.5</dependency.org.mockito.mockito-all.version>
     <dependency.pentaho-kettle.kettle-core.version>${project.version}</dependency.pentaho-kettle.kettle-core.version>
@@ -19,11 +29,6 @@
     <dependency.pentaho-kettle.kettle-ui-swt.version>${project.version}</dependency.pentaho-kettle.kettle-ui-swt.version>
     <dependency.pentaho.metastore.version>${project.version}</dependency.pentaho.metastore.version>
   </properties>
-  <scm>
-    <developerConnection>
-      scm:git:git@github.com:pentaho/pdi-spark-plugin.git
-    </developerConnection>
-  </scm>
   <dependencies>
     <!-- ##################### PROVIDED #########################-->
     <dependency>
