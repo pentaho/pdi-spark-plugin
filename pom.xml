@@ -1,15 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>pentaho</groupId>
-  <artifactId>pdi-spark-plugin</artifactId>
-  <version>6.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
   <parent>
     <groupId>org.pentaho</groupId>
     <artifactId>pentaho-ce-jar-parent-pom</artifactId>
     <version>1.1.7</version>
   </parent>
+  <groupId>pentaho</groupId>
+  <artifactId>pdi-spark-plugin</artifactId>
+  <version>6.0.1.1-398</version>
   <name>pdi-spark-plugin</name>
   <scm>
     <developerConnection>scm:git:git@github.com:pentaho/pdi-spark-plugin.git</developerConnection>
@@ -22,15 +22,14 @@
     </site>
   </distributionManagement>
   <properties>
-    <dependency.org.mockito.mockito-all.version>1.9.5</dependency.org.mockito.mockito-all.version>
+    <dependency.pentaho.metastore.version>${project.version}</dependency.pentaho.metastore.version>
     <dependency.pentaho-kettle.kettle-core.version>${project.version}</dependency.pentaho-kettle.kettle-core.version>
+    <dependency.org.mockito.mockito-all.version>1.9.5</dependency.org.mockito.mockito-all.version>
     <dependency.pentaho-kettle.kettle-engine.version>${project.version}</dependency.pentaho-kettle.kettle-engine.version>
     <dependency.pentaho-kettle.kettle-engine-test.version>${project.version}</dependency.pentaho-kettle.kettle-engine-test.version>
     <dependency.pentaho-kettle.kettle-ui-swt.version>${project.version}</dependency.pentaho-kettle.kettle-ui-swt.version>
-    <dependency.pentaho.metastore.version>${project.version}</dependency.pentaho.metastore.version>
   </properties>
   <dependencies>
-    <!-- ##################### PROVIDED #########################-->
     <dependency>
       <groupId>pentaho-kettle</groupId>
       <artifactId>kettle-core</artifactId>
@@ -55,7 +54,6 @@
       <version>${dependency.pentaho.metastore.version}</version>
       <scope>provided</scope>
     </dependency>
-    <!-- ##################### TEST #############################-->
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-all</artifactId>
@@ -72,11 +70,10 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
           <execution>
-          <id>package-assembly</id>
+            <id>package-assembly</id>
             <phase>package</phase>
             <goals>
               <goal>single</goal>
